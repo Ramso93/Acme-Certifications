@@ -28,6 +28,8 @@
 		<value>/views/announcement/messages</value>
 		<value>/views/certification/messages</value>
 		<value>/views/exam/messages</value>
+		
+		<value>/views/company/messages</value>
 	</util:list>
 
 </beans>

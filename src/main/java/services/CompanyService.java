@@ -35,6 +35,27 @@ public class CompanyService {
 
 		return result;
 	}
-	// Other business methods -------------------------------------------------
+	public Company save(final Company company) {
+		assert company != null;
 
+		Company result;
+		//Date currentMoment;
+
+		//currentMoment = new Date();
+		//Assert.isTrue(announcement.getCertification().getExtinctionDate().after(currentMoment));
+		//Assert.isTrue(announcement.getCertification().getExams().contains(announcement.getExam()));
+
+		result = this.companyRepository.save(company);
+
+		return result;
+	}
+	// Other business methods -------------------------------------------------
+	public Company findOne(final int companyId) {
+		Company result;
+
+		result = this.companyRepository.findOne(companyId);
+		Assert.notNull(result);
+
+		return result;
+	}
 }
