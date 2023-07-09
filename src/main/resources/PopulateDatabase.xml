@@ -170,7 +170,19 @@
 			</list>
 		</property>			
 	</bean>		
-	
+	<!-- Company 1-1 -->
+	<bean id="company1" class="domain.Company">
+		<property name="name" value="Company1"/>
+		<property name="Certification" ref="certification1"/>
+	</bean>
+	<bean id="company2" class="domain.Company">
+		<property name="name" value="Company2"/>
+		<property name="Certification" ref="certification2"/>
+	</bean>
+	<bean id="company3" class="domain.Company">
+		<property name="name" value="Company3"/>
+		<property name="Certification" ref="certification3"/>
+	</bean>
 	<!-- Certifications -->
 	
 	<bean id="certification1" class="domain.Certification">
@@ -184,6 +196,7 @@
 				<ref bean="exam2" />
 			</list>
 		</property>		
+		<property name="Company" ref="company1"/>
 	</bean>
 	
 	<bean id="certification2" class="domain.Certification">
@@ -195,7 +208,8 @@
 			<list>
 				<ref bean="exam3" />
 			</list>
-		</property>		
+		</property>	
+		<property name="Company" ref="company2"/>	
 	</bean>
 	
 	<bean id="certification3" class="domain.Certification">
@@ -208,6 +222,7 @@
 				<ref bean="exam4" />
 			</list>
 		</property>		
+		<property name="Company" ref="company3"/>
 	</bean>
 	
 	<!-- Registrations -->

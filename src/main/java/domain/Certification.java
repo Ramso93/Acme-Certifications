@@ -1,8 +1,8 @@
 /*
  * Certification.java
- * 
+ *
  * Copyright (C) 2017 Universidad de Sevilla
- * 
+ *
  * The use of this project is hereby constrained to the conditions of the
  * TDG Licence, a copy of which you may download from
  * http://www.tdg-seville.info/License.html
@@ -18,7 +18,9 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Digits;
@@ -92,7 +94,7 @@ public class Certification extends DomainEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	private Collection<Exam>	exams;
+	private Collection<Exam> exams;
 
 
 	@NotEmpty
@@ -113,6 +115,20 @@ public class Certification extends DomainEntity {
 	public void removeExam(final Exam exam) {
 		this.exams.remove(exam);
 		exam.setCertification(null);
+	}
+
+
+	private Company company;
+
+
+	@OneToOne
+	@JoinColumn(name = "company_id")
+	public Company getCompany() {
+		return this.company;
+	}
+
+	public void setCompany(final Company company) {
+		this.company = company;
 	}
 
 }
