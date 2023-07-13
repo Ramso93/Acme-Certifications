@@ -1,8 +1,8 @@
 /*
  * Certification.java
- * 
+ *
  * Copyright (C) 2017 Universidad de Sevilla
- * 
+ *
  * The use of this project is hereby constrained to the conditions of the
  * TDG Licence, a copy of which you may download from
  * http://www.tdg-seville.info/License.html
@@ -92,7 +92,8 @@ public class Certification extends DomainEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	private Collection<Exam>	exams;
+	private Collection<Exam>		exams;
+	private Collection<Pencil458>	pencils;
 
 
 	@NotEmpty
@@ -113,6 +114,15 @@ public class Certification extends DomainEntity {
 	public void removeExam(final Exam exam) {
 		this.exams.remove(exam);
 		exam.setCertification(null);
+	}
+
+	@OneToMany(mappedBy = "certification")
+	public Collection<Pencil458> getPencils() {
+		return this.pencils;
+	}
+
+	public void setPencils(final Collection<Pencil458> pencils) {
+		this.pencils = pencils;
 	}
 
 }

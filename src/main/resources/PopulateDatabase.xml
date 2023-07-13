@@ -533,6 +533,53 @@
 		<property name="maximumMark" value="1" />
 		<property name="answer" value="Answer 8" />
 		<property name="exam" ref="exam4" />						
-	</bean>				
+	</bean>	
+	
+	<!-- Exam -->
+	<bean id="pencil1" class="domain.Pencil458">
+		<property name="description375" value="description Pencil1" />
+		<property name="anniversary866" value="01/01/2023" />
+		<property name="weight343" value="48" />
+		<!-- <property name="birthdate045" value="" /> -->
+		
+		<property name="certification" ref="certification1" />
+								
+	</bean>	
+	
+	<bean id="pencil2" class="domain.Pencil458">
+		<property name="description375" value="description Pencil2" />
+		<property name="anniversary866" value="01/01/2023" />
+		<property name="weight343" value="49" />
+		<!-- <property name="birthdate045" value="" /> -->
+								
+	</bean>	
+	
+	<bean id="pencil3" class="domain.Pencil458">
+		<property name="description375" value="description Pencil3" />
+		<property name="anniversary866" value="01/01/2023" />
+		<property name="weight343" value="55" />
+		<!-- <property name="birthdate045" value="" /> -->
+		
+		<property name="certification" ref="certification2" />
+								
+	</bean>	
+
+	<bean id="pencil4" class="domain.Pencil458">
+		<property name="description375" value="description Pencil4" />
+		<property name="anniversary866" value="01/01/2023" />
+		<property name="weight343" value="60" />
+		<!-- <property name="birthdate045" value="" /> -->
+								
+	</bean>	
+	
+	<bean id="pencil5" class="domain.Pencil458">
+		<property name="description375" value="description Pencil5" />
+		<property name="anniversary866" value="01/01/2023" />
+		<property name="weight343" value="64" />
+		<!-- <property name="birthdate045" value="" /> -->
+		
+		<property name="certification" ref="certification3" />
+								
+	</bean>	
 	
 </beans>

@@ -45,12 +45,18 @@
 				</ul>
 			</li>
 		</security:authorize>
-
 		<security:authorize access="hasRole('REVIEWER')">
 			<li><a class="fNiv"><spring:message	code="master.page.reviewer" /></a>
 				<ul>
 					<li class="arrow"></li>
 					<li><a href="announcement/reviewer/list-to-review.do"><spring:message code="master.page.customer.list-to-review" /></a></li>					
+				</ul>
+			</li>
+			
+			<li><a class="fNiv"><spring:message	code="master.page.pencil458" /></a>
+				<ul>
+					<li class="arrow"></li>
+					<li><a href="pencil/reviewer/list.do"><spring:message code="master.page.reviewer.list" /></a></li>
 				</ul>
 			</li>
 		</security:authorize>
